@@ -1,4 +1,4 @@
-FROM --platform=${TARGETPLATFORM} ubuntu:latest
+FROM --platform=${TARGETPLATFORM} ubuntu:22.04
 
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
