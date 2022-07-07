@@ -30,7 +30,7 @@ jobs:
           # QEMU static binaries Docker image (e.g. tonistiigi/binfmt:latest)
           #image: # optional, default is tonistiigi/binfmt:latest
           # Platforms to install (e.g. arm64,riscv64,arm)
-          platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x # optional, default is all
+          platforms: linux/amd64, linux/arm64
           
       - name: Available platforms
         run: echo ${{ steps.qemu.outputs.platforms }}
