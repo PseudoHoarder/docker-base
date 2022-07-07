@@ -61,7 +61,7 @@ jobs:
         # uses: docker/build-push-action@9379083e426e2e84abb80c8c091f5cdeb7d3fd7a
         uses: docker/build-push-action@v2.3.0
         with:
-          tags: ${{ secrets.DOCKER_USER }}/docker-base:latest # optional
+          tags: ${{ secrets.DOCKER_USERNAME }}/docker-base:latest # optional
           platforms: ${{ steps.qemu.outputs.platforms }} # optional
           push: true # optional, default is false
           
