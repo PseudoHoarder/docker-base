@@ -47,7 +47,6 @@ jobs:
           --build-arg VCS_URL=`git remote get-url origin`
           --build-arg VERSION="1.0"
           --build-arg TIMEZONE="Asia/Kathmandu"
-          --tag ${{ secrets.DOCKERHUB_USERNAME }}/docker-base:$(date +%Y.%j.%H)
           --tag ${{ secrets.DOCKERHUB_USERNAME }}/docker-base:latest
           
           docker buildx imagetools inspect ${{ secrets.DOCKERHUB_USERNAME }}/docker-base:latest
