@@ -1,0 +1,14 @@
+task:
+  compute_engine_instance:
+    image_project: cirrus-images
+    image: family/docker-builder
+    platform: linux
+    
+docker_builder:
+  timeout_in: 120m
+  env:
+    DOCKER_USERNAME: ENCRYPTED[!0ea7af86dabde347d46d56e217d101f3c1b32428ba228594c4d5ee7fb83b365e46225bb67de97856d4ee1813455fb1f2!]
+    DOCKER_PASSWORD: ENCRYPTED[!28d197114ce72d0439c03e07829e8f3d667e5742ed051d2ecef3bc664e1cd819f823426ee6e14fa3812134a2c32f94ee!]
+  build_script: docker build --tag $DOCKER_USERNAME/test .
+  login_script: docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+  push_script: docker push $DOCKER_USERNAME/test
