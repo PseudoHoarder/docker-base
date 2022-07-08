@@ -9,7 +9,7 @@ RUN  DEBIAN_FRONTEND="noninteractive" apt-get -qq install -y git python3 python3
     locales python3-lxml aria2  wget\
     curl unzip zip gcc gnupg \
     g++ apt-transport-https \
-    ca-certificates xz-utils
+    ca-certificates xz-utils neofetch
 
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
